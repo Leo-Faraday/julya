@@ -1632,7 +1632,7 @@ section {
     }
 
     .content h1 {
-      font-size: 25px;
+      font-size: 32px;
     }
   
     .button {
@@ -1644,6 +1644,9 @@ section {
     }
   
     .whome {
+      width: 100%;
+      max-width: 1200px; /* задайте нужное значение */
+      margin: 0 auto;
       height: auto;
       padding: 40px 0;
     }
@@ -1654,7 +1657,7 @@ section {
   
     .back--photo img {
       width: 100%;
-      max-width: 400px;
+      max-width: 600px; /* увеличено с 400px до 600px */
       margin: 0 auto;
     }
   
@@ -1662,8 +1665,21 @@ section {
       margin-top: 20px;
     }
     .recent__workshop--grid {
+      width: 100%;         /* Контейнер занимает всю доступную ширину */
+      max-width: 100%;     /* Убираем ограничение, если оно было установлено где-то выше */
+      display: flex;
       gap: 50px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
+    
+    .recent__workshop--grid img {
+      width: 100%;
+      max-width: 100%;     /* Изображения теперь могут занимать всю ширину контейнера */
+      display: block;
+    }
+    
+    
   
     .extreme__heating--container {
       padding: 0 15px;
@@ -1708,12 +1724,16 @@ section {
       font-size: 16px;
     }
 
-    .back--photo {
-      max-width: 250px;
+    .back--photo img {
+      width: 100%;
+      max-width: 600px; /* увеличено с 400px до 600px */
+      margin: 0 auto;
     }
   
     .content h1 {
-      font-size: 14px;
+      max-width: 1200px;
+      font-size: 22px;
+      white-space: normal; /* разрешает перенос слов */
     }
   
     .button__whome {
@@ -1728,6 +1748,7 @@ section {
       font-size: 28px;
       margin-bottom: 60px;
     }
+    
   
     .recent__workshop--item figcaption {
       font-size: 16px;
@@ -1758,15 +1779,15 @@ section {
     }
   }
   
-  @media (max-width: 360px) {
+  @media (max-width: 375px) {
 
     .header {
         min-height: 100px;
         background-size: 50% 10%, 50% 10%, cover;
         background-position: 
-        top center,    /* Для первого градиента */
-        bottom center, /* Для второго градиента */
-        center;        /* Для основного изображения */
+        top center,  
+        bottom center, 
+        center;       
       }
 
     .header__top_row h1 {
@@ -1782,8 +1803,12 @@ section {
     }
 
     .content h1 {
-        font-size: 14px;
+      max-width: 1200px;
+
+      font-size: 19px;
+      white-space: normal; /* разрешает перенос слов */
     }
+    
 
     .header__title {
         margin-top: -40px;
